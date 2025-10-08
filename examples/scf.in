@@ -1,16 +1,19 @@
 &control
-  calculation='scf'
-  prefix='al'
-  outdir='./tmp'
-  pseudo_dir='../pseudo-potentials/SSSP_1.3.0_PBE_efficiency'
+  calculation = 'scf'
+  prefix      = 'al'
+  outdir      = './tmp'
+  pseudo_dir  = '../pseudo-potentials/SSSP_1.3.0_PBE_efficiency'
 /
 &system
   ibrav=2, celldm(1)=7.50, nat=1, ntyp=1
-  ecutwfc=40
+  ecutwfc=80, ecutrho=800
   occupations='smearing', smearing='mp', degauss=0.02
+  input_dft='PBE'
 /
 &electrons
-  conv_thr=1.0d-8
+  conv_thr=1.0d-10
+  mixing_beta=0.3
+  electron_maxstep=200
   diagonalization='david'
 /
 ATOMIC_SPECIES
@@ -18,4 +21,4 @@ ATOMIC_SPECIES
 ATOMIC_POSITIONS crystal
   Al 0.00 0.00 0.00
 K_POINTS automatic
- 12 12 12 0 0 0
+  24 24 24  0 0 0
