@@ -1,0 +1,10 @@
+export NVHPC=/opt/nvidia/hpc_sdk
+export NVHPC_CUDA_HOME=$NVHPC/Linux_x86_64/25.9/cuda/13.0
+export NVCOMPILER_COMM_LIBS_HOME=$NVHPC/Linux_x86_64/25.9/comm_libs/13.0
+export OMPI_ROOT=$NVCOMPILER_COMM_LIBS_HOME/hpcx/hpcx-2.24/ompi
+export OPAL_PREFIX=$OMPI_ROOT
+export PATH=$OMPI_ROOT/bin:$NVHPC/Linux_x86_64/25.9/compilers/bin:$PATH
+export LD_LIBRARY_PATH=$OMPI_ROOT/lib:$NVHPC/Linux_x86_64/25.9/compilers/lib:$NVCOMPILER_COMM_LIBS_HOME/hpcx/latest/ucx/lib:$NVCOMPILER_COMM_LIBS_HOME/hpcx/latest/ucc/lib:$NVHPC_CUDA_HOME/lib64:$LD_LIBRARY_PATH
+export OMP_NUM_THREADS=16
+export CUDA_VISIBLE_DEVICES=0
+export PATH=/home/x/Programs/espresso/bin:$PATH
