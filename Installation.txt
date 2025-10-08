@@ -1,0 +1,7 @@
+Download quantum espresso
+
+Configure at:
+https://gitlab.com/QEF/q-e-gpu/-/wikis/home
+
+On the current machine:
+./configure CC=nvc CXX=nvc++ FC=nvfortran F90=nvfortran F77=nvfortran MPIF90=mpif90 --enable-openmp --with-cuda="$NVHPC_CUDA_HOME" --with-cuda-runtime="$QE_CUDA_RT" --with-cuda-cc="$QE_CC" --with-scalapack=no --prefix=/home/x/Programs/espresso
