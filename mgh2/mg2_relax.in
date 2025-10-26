@@ -1,0 +1,26 @@
+&control
+  calculation = 'vc-relax',
+  prefix = 'mgh2',
+  pseudo_dir = '../pseudo-potentials/SSSP_1.3.0_PBE_efficiency',
+  outdir = './tmp'
+/
+&system
+  ibrav = 6, a = 4.5, c = 3.0, nat = 3, ntyp = 2,
+  ecutwfc = 70, ecutrho = 560
+/
+&electrons
+  conv_thr = 1.0d-8
+/
+&ions
+/
+&cell
+/
+ATOMIC_SPECIES
+  Mg 24.305 Mg.pbe-n-kjpaw_psl.0.3.0.UPF
+  H  1.008  H.pbe-rrkjus_psl.1.0.0.UPF
+ATOMIC_POSITIONS crystal
+  Mg 0.0000 0.0000 0.0000
+  H  0.3040 0.3040 0.0000
+  H -0.3040 -0.3040 0.0000
+K_POINTS automatic
+  10 10 14  0 0 0

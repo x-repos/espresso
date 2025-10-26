@@ -1,0 +1,19 @@
+&control
+  calculation = 'scf',
+  prefix = 'h2',
+  pseudo_dir = '../pseudo-potentials/SSSP_1.3.0_PBE_efficiency',
+  outdir = './tmp'
+/
+&system
+  ibrav = 1, celldm(1) = 28.4, nat = 2, ntyp = 1,
+  ecutwfc = 70, ecutrho = 560, occupations = 'fixed'
+/
+&electrons
+  conv_thr = 1.0d-10
+/
+ATOMIC_SPECIES
+  H 1.008 H.pbe-rrkjus_psl.1.0.0.UPF
+ATOMIC_POSITIONS angstrom
+  H 0.000 0.000 0.000
+  H 0.000 0.000 0.74
+K_POINTS gamma
